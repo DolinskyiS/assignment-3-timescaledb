@@ -1,7 +1,6 @@
 import psycopg2
 import random
 from datetime import datetime, timedelta
-import time
 
 ## connecting to timescaledb
 conn = psycopg2.connect(
