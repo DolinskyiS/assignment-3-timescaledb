@@ -14,10 +14,14 @@ SELECT show_chunks('telemetry');
 
 The documentation of how we can export schema and data from your database from assignment part 2, and import it to a timescale database:
 
+
+
 Step 1:
 Run this command in the terminal which gets all schems and data from database assignment_2 and turns it into .sql file:
 
 mysqldump -u root -p --databases assignment_2 > assignment_2_dump.sql
+
+
 
 Step 2:
 Manually edit the sql file into PostgreSQL supported one, by changing: 
@@ -32,6 +36,8 @@ removing maridb commands or comments that are in the file, like: ENGINE=InnoDB A
 Turning INSERT INTO 'Customer' VALUES ... into INSERT INTO Customer (customer_id, first_name, second_name, etc) VALUES ...
 
 Dropping somewhere '' entirely
+
+
 
 Step 3:
 if you already have a Timescale container(according to the documentation description you do), import all the dump with this command:
